@@ -1,0 +1,9 @@
+public static boolean pal(String s,int m,int n){
+    if(m>=n){
+        return true;
+    }
+    if(s.charAt(m)!=s.charAt(n)){
+        return false;
+    }
+    return pal(s,m+1,n-1);
+}
