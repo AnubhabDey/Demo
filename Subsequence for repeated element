@@ -1,0 +1,21 @@
+import java.util.HashSet;
+class HelloWorld {
+    public static void sub(String s,int m,String n,HashSet<String>h){
+        if(m==s.length()){
+            if(!h.contains(n)){
+                System.out.println(n);
+                h.add(n);
+                return;
+            }
+            else{
+                return;
+            }
+        }
+        sub(s,m+1,n+s.charAt(m),h);
+        sub(s,m+1,n,h);
+    }
+    public static void main(String[] args) {
+        HashSet<String>h=new HashSet<>();
+        sub("aaa",0,"",h);
+    }
+}
