@@ -1,13 +1,14 @@
 class Demo{
-    static void tower(int n,String s,String d,String h){
-        if(n==0){
+    static void tower(int n,String s,String h,String d){
+        if(n==1){
+            System.out.println(n +" moved form "+ s +" to "+ d);
             return;
         }
-        tower( n-1, s, h, d);
+        tower( n-1, s, d, h);
         System.out.println(n +" moved form "+ s +" to "+ d);
-        tower( n-1, h, d, s);
+        tower( n-1, h, s, d);
     }
     public static void main(String[] args) {
-        tower(3,"A","C","B");
+        tower(3,"A","B","C");
     }
 }
