@@ -1,0 +1,11 @@
+public static void permstr(String str,String perm,int x){
+        if(str.length()==0){
+            System.out.println(perm);
+            return;
+        }
+        for(int i=0;i<str.length();i++){
+            char a=str.charAt(i);
+            String s=str.substring(0,i)+str.substring(i+1,str.length());
+            permstr(s, perm+a, x+1);
+        }
+    }
