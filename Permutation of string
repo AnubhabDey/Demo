@@ -1,4 +1,4 @@
-public static void permstr(String str,String perm,int x){
+public static void permstr(String str,String perm){
         if(str.length()==0){
             System.out.println(perm);
             return;
@@ -6,6 +6,6 @@ public static void permstr(String str,String perm,int x){
         for(int i=0;i<str.length();i++){
             char a=str.charAt(i);
             String s=str.substring(0,i)+str.substring(i+1,str.length());
-            permstr(s, perm+a, x+1);
+            permstr(s, perm+a);
         }
     }
